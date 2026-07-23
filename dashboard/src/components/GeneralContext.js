@@ -1,8 +1,13 @@
-import React from 'react'
-function GeneralContext() {
-    return (  
-        <h1>GeneralContext</h1>
-    );
-}
+import React, { createContext } from "react";
 
-export default GeneralContext;
+export const GeneralContext = createContext();
+
+const GeneralContextProvider = ({ children }) => {
+  return (
+    <GeneralContext.Provider value={{}}>
+      {children}
+    </GeneralContext.Provider>
+  );
+};
+
+export default GeneralContextProvider;
