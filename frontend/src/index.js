@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 
 import HomePage from "./home/HomePage";
-import Signup from "./signup/Signup";
+import Signup from "./signup/SignUp";
 import AboutPage from "./about/AboutPage";
 import ProductPage from "./products/ProductPage";
 import PricingPage from "./pricing/PricingPage";
