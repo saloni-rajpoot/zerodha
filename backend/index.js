@@ -4,11 +4,16 @@ dns.setServers(['8.8.8.8', '8.8.4.4']);
 
 const express = require ("express");
 const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+const cors = require("cors");
 const { HoldingsModel } = require('./model/HoldingsModel');
 const { PositionsModel } = require('./model/PositionsModel');
 const app = express();
 const PORT = process.env.PORT || 3002;
 const url = process.env.MONGO_URL;
+
+app.use(cors());
+app.use(bodyParser.json());
 
 // app.get('/addHoldings',async(req,res)=>{
 //     let tempHoldings = [
