@@ -1,6 +1,7 @@
 require('dotenv').config();
 const dns = require('dns');
 dns.setServers(['8.8.8.8', '8.8.4.4']);
+const authRoutes = require('./routes/auth');
 
 const express = require ("express");
 const mongoose = require("mongoose");
@@ -14,6 +15,7 @@ const url = process.env.MONGO_URL;
 
 app.use(cors());
 app.use(bodyParser.json());
+app.use('/api/auth', authRoutes);
 
 // app.get('/addHoldings',async(req,res)=>{
 //     let tempHoldings = [
