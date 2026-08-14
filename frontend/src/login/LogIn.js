@@ -28,7 +28,7 @@ function Login() {
       );
 
       localStorage.setItem('token', res.data.token);
-      navigate('/dashboard');
+       window.location.href = 'http://localhost:3001';
     } catch (err) {
       setError(err.response?.data?.message || 'Something went wrong');
     } finally {
