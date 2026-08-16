@@ -24,7 +24,7 @@ function SignUp() {
 
     try {
       const res = await axios.post(
-        'http://https://zerodha-wdd0.onrender.com/api/auth/signup', // change to your actual endpoint
+        'https://zerodha-wdd0.onrender.com/api/auth/signup', // change to your actual endpoint
         formData
       );
 

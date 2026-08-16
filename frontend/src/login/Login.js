@@ -23,7 +23,7 @@ function Login() {
 
     try {
       const res = await axios.post(
-        'http://https://zerodha-wdd0.onrender.com/api/auth/login',
+         'https://zerodha-wdd0.onrender.com/api/auth/login',
         formData
       );
 
